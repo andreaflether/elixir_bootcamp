@@ -7,7 +7,14 @@ defmodule Cards.MixProject do
       version: "0.1.0",
       elixir: "~> 1.9",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      # Docs
+      name: "Cards",
+      source_url: "https://github.com/andreaflether/elixir_bootcamp",
+      docs: [
+        main: "Cards",
+        extras: ["README.md"]
+      ]
     ]
   end
 
@@ -21,7 +28,7 @@ defmodule Cards.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:ex_doc, "~> 0.27", only: :dev, runtime: false},
+      {:ex_doc, "0.27.0", only: :dev, runtime: false},
     ]
   end
 end
