@@ -5,6 +5,7 @@ defmodule Identicon do
     |> pick_color
     |> build_grid
     |> filter_odd_squares
+    |> build_pixel_map
   end
 
   def hash_input(input) do
@@ -40,5 +41,9 @@ defmodule Identicon do
     end
 
     %Identicon.Image{ image | grid: grid}
+  end
+
+  def build_pixel_map(%Identicon.Image{ grid: grid } = image) do
+
   end
 end
